@@ -1,6 +1,8 @@
 base:
   '*':
+    - timezone
     - oracle-jdk7
-    - git
+    - scm
     - maven
     - vim
+    - ant
