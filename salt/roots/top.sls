@@ -6,3 +6,4 @@ base:
     - maven
     - vim
     - ant
+    - tomcat
