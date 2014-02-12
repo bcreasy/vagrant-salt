@@ -1,11 +1,14 @@
 tomcat7:
   pkg:
     - installed
-  service:
-    - running
+  service.running:
+    - enable: True
     - watch:
       - pkg: tomcat7
+      - file: /etc/tomcat/tomcat-users.xml
       - file.append: tomcat-config
+
+/etc/tomcat/tomcat-users.xml:
   file.managed:
     - name: /etc/tomcat7/tomcat-users.xml
     - source: salt://tomcat/tomcat-users.xml
